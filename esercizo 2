@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stampa Numeri e 10%</title>
+</head>
+<body>
+
+<label for="numero">Inserisci un numero:</label>
+<input type="number" id="numero" min="1" step="1">
+
+<button onclick="stampaNumeri()">Stampa Numeri</button>
+
+<div id="output"></div>
+
+<script>
+  function stampaNumeri() {
+    var numeroInput = document.getElementById("numero").value;
+    var outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = ""; // Pulisci il contenuto precedente
+
+    for (var i = 1; i <= numeroInput; i++) {
+      outputDiv.innerHTML += i + "<br>";
+    }
+
+    var dieciPercento = numeroInput * 0.1;
+    outputDiv.innerHTML += "<br>10% del numero: " + dieciPercento;
+  }
+</script>
+
+</body>
+</html>
