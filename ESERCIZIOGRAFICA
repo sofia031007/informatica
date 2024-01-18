@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadrati Colorati</title>
+  <style>
+    .square {
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      display: inline-block;
+      margin: 5px; /* Spazio tra i quadrati */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Creazione dei quadrati -->
+  <div class="square" style="background-color: red;"></div>
+  <div class="square" style="background-color: blue;"></div>
+  <div class="square" style="background-color: green;"></div>
+  <div class="square" style="background-color: yellow;"></div>
+  <div class="square" style="background-color: purple;"></div>
+  <div class="square" style="background-color: orange;"></div>
+  <div class="square" style="background-color: pink;"></div>
+  <div class="square" style="background-color: cyan;"></div>
+  <div class="square" style="background-color: brown;"></div>
+  <div class="square" style="background-color: gray;"></div>
+
+</body>
+</html>
