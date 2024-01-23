@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .square {
+      width: 10px;
+      height: 10px;
+      margin: 2px;
+      display: inline-block;
+    }
+
+    .even {
+      background-color: #f2f2f2;
+      border: 1px solid #000;
+    }
+
+    .odd {
+      background-color: #666;
+      border: 1px solid #000;
+    }
+  </style>
+  <title>Quadrati</title>
+</head>
+<body>
+
+<script>
+  for (let i = 1; i <= 100; i++) {
+    document.write('<div class="square ' + (i % 2 === 0 ? 'even' : 'odd') + '"></div>');
+    if (i % 10 === 0) {
+      document.write('<br>');
+    }
+  }
+</script>
+
+</body>
+</html>
+
