@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array1</title>
+</head>
+<body>
+ 
+    <p id ="out"></p>
+    <div>
+        <button id="b1" onclick="AddElementArray()" > Ordina un prodotto</button>
+        <button id="b2" onclick="DeleteElementArray()" > Cancella ultimo prodotto</button>
+        <button id="b3" onclick="CountElements()" > Conta elementi</button>
+        <p id="fruitsOut"></p>
+       
+    </div>
+    <script>
+    let a="Array esercizio 1";
+    document.getElementById("out").innerHTML=a;
+   
+   let fruits=["Orange","Apple","Strawberry","Pear","Mango","kiwi"]
+   document.getElementById("fruitsOut").innerHTML=fruits;
+ 
+  function AddElementArray(){
+    let nuovoElemento=prompt("Inserisci un frutto");
+    fruits.push(nuovoElemento);
+    document.getElementById("fruitsOut").innerHTML=fruits;
+  }
+
+ 
+  function DeleteElementArray(){
+    fruits.pop();
+    document.getElementById("fruitsOut").innerHTML=fruits;
+  }
+
+ 
+  function CountElements(){
+    let count = fruits.length;
+    alert("Il numero di elementi nell'array è: " + count);
+  }
+
+       
+
+
+
+
+    </script>
+   
+</body>
+</html>
