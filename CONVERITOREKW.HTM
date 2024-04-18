@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    #kw_kwh{background-color: rgb(164, 164, 164);
+        margin: 10px;
+        color: white;
+       height: 150px;
+       width: 300px;
+       border-style: solid;
+        border: 1px;
+        border-color: black;
+
+
+
+
+    }
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <p>un kilowatt è un unita di misura dell energia elettrica che corrispondono a mille watt.
+        se a casa avessimo un elettrodomestico (es.lavatrice)che consumano mille watt ed è in funzione per un ora
+        l unita di misura per comprendere il consumo effetivo della lavatrice corrisponde ai suoi watt per il tempo di utilizzo (kwh)
+        crea un programma che converte i kilowatt in kilowatt ora (formula=kwh=kw x ora)
+    </p>
+
+    <div id="kw_kwh"> kw in kwh
+        <label for="kwinput">kw:</label>
+        <input type="text" id="kwinput" name="kwinput">
+
+        <label for="orainput">ora:</label>
+        <input type="text" id="orainput" name="orainput">
+
+<button onclick="convertiKWH()">Calcola</button>
+
+<p id="out">
+
+
+
+</p>
+
+
+
+    </div>
+<script>
+function convertiKWH() {
+
+
+
+  let kw=  document.getElementById("kwinput").value
+  let ora=  document.getElementById("orainput").value
+  let kwh = kw * ora
+console.log(kw)
+console.log(kwh)
+console.log(ora)
+  document.getElementById("out").innerHTML=kwh
+
+
+}
+
+
+
+</script>
+</body>
+
+</html>
