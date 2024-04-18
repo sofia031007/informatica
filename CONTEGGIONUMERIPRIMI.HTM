@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteggio numeri primi</title>
+</head>
+<body>
+
+    <div id="output">
+     
+    </div>
+
+    <script>
+        let arrayNumeriPrimi = [];
+        let outputDiv = document.getElementById("output");
+
+        for (let intervallo = 1; intervallo <= 10000; intervallo += 100) {
+            let contatorePrimi = ContaPrimi(intervallo, intervallo + 100);
+            outputDiv.innerHTML += "<p>Intervallo " + intervallo + " - " + (intervallo + 100) + ": " + contatorePrimi + " numeri primi</p>";
+        }
+
+        function ContaPrimi(start, end) {
+            let contatore = 0;
+            for (let numero = start; numero < end; numero++) {
+                let divisoriNumero = Divisori(numero);
+
+                if (divisoriNumero.length === 1) {
+                    arrayNumeriPrimi.push(numero);
+                    contatore++;
+                }
+            }
+            return contatore;
+        }
+
+        function Divisori(n) {
+            let divisori = [];
+            let massimoDivisore = Math.floor(Math.sqrt(n));
+            for (let i = 2; i <= massimoDivisore; i++) {
+                if (n % i === 0) {
+                    divisori.push(i);
+                }
+            }
+            if (divisori.length === 0) {
+                divisori.push("Primo");
+            }
+            return divisori;
+        }
+    </script>
+</body>
+</html>
