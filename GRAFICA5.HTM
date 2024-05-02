@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box1 {
+            width: 10px;
+            height: 10px;
+            margin: 2px;
+            float: left;
+        }
+        .quadrato1 {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+        }
+        .quadrato2 {
+            background-color: #d3d3d3;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+  <img id="pizza" class="image" src="https://lh3.googleusercontent.com/drive-storage/ANtge_FTjp56ZMS2q8mM8jTfX3Vj4wNppZzEDzTgyCm9zubC4UH-IuQ10k0DTyvZYn4uekhcrE4r9cBGQ793cu9QiTZEHUrJ17xhx6_T-Go0DA=w1349-h641" alt="Pizza">
+  <img id="bomba" class="image" src="https://lh3.googleusercontent.com/drive-storage/ANtge_HrZ8zOipQmFHcZ9z1mY6y_DCVaB4RQ6ubRDZXALWlFx8f8tFrTnJwgi3G99Ze7vPUgN3Y5tOfZzUNBrYXpTChYA7jPEJi7oSconIU4jA=w1349-h641" alt="Bomba">
+
+  <script>
+  let container = document.getElementById('container');
+  let pizzaCounter = 0;
+  let bombaCounter = 0;
+
+  for (let i = 1; i <= 625; i++) {
+    let box1 = document.createElement('div');
+    box1.classList.add('box1');
+    if (i % 2 === 0) {
+      box1.classList.add('quadrato1');
+    }else {
+      box1.classList.add('quadrato2');
+    }
+
+    box1.addEventListener('click', function() {
+      if (event.target === document.getElementById('pizza')) {
+        pizzaCounter++;
+        console.log("Hai cliccato la pizza " + pizzaCounter + " volte");
+      } else if (event.target === document.getElementById('bomba')) {
+        bombaCounter++;
+        console.log("Hai cliccato la bomba " + bombaCounter + " volte");
+      }
+    });
+
+    container.appendChild(box1);
+
+    if (i % 25 === 0) {
+      container.appendChild(document.createElement('br'));
+    }
+  }
+  </script>
+  </body>
+</html>
