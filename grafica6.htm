@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatore di click</title>
+    <script>
+        let contatore1 = 0;
+        let contatore2 = 0;
+
+        function contaClick(id) {
+            if (id === 1) {
+                contatore1++;
+                document.getElementById('count1').innerHTML = 'Cliccato ' + contatore1 + ' volta l\'immagine 1';
+            } else {
+                contatore2++;
+                document.getElementById('count2').innerHTML = 'Cliccato ' + contatore2 + ' volta l\'immagine 2';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="https://www.nonsprecare.it/wp-content/uploads/2017/03/come-parlano-alberi-significato-simbolico-1.jpg" width="200px" onclick="contaClick(1)">
+        <p id="count1">Cliccato 0 volta l'immagine 1</p>
+    </div>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaCwjBhIjn6vs8bgL37qq6FgVzP9YtL5GH9A&usqp=CAU" height="200px" onclick="contaClick(2)">
+        <p id="count2">Cliccato 0 volta l'immagine 2</p>
+    </div>
+</body>
+</html>
