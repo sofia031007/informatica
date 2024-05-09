@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>verifica </title>
+<style>
+    .square {
+        width: 30px;
+        height: 30px;
+        margin: 2px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+    }
+</style>
+</head>
+<body>
+<div id="container"></div>
+
+<script>
+function isPrime(n) {
+    let bPrime = true;
+    let fat = 2;
+    while (fat <= n / 2) {
+        if (n % fat == 0) {
+            bPrime = false;
+        }
+        fat++;
+    }
+    return bPrime;
+}
+
+const container = document.getElementById('container');
+const numbersArray = Array.from({length: 1000}, (_, i) => i + 1000);
+
+numbersArray.forEach(number => {
+    const square = document.createElement('div');
+    square.textContent = number;
+    square.classList.add('square');
+
+    if (number % 2 === 0) {
+        square.style.backgroundColor = 'darkred';
+    } else {
+        square.style.backgroundColor = 'lightblue';
+    }
+
+    if (number % 7 === 0) {
+        square.style.backgroundColor = 'lightcoral';
+    }
+
+    if (isPrime(number)) {
+        square.style.backgroundColor = 'yellow';
+    }
+
+    container.appendChild(square);
+});
+</script>
+</body>
+</html>
