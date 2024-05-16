@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style>
+    button {
+      height: 60px;
+      width: 60px;
+    }    
+  </style>
+<body>
+<button id="bottone1">bottone 1</button>
+<button id="bottone2">bottone 2</button>
+<button id="bottone3">bottone 3</button>
+
+<p id="output"></p>
+
+<script>
+
+  let n1 = 1;
+  let n2 = 1;
+  let n3 = 1;
+
+  document.getElementById("bottone1").addEventListener("click", function() {
+      document.getElementById("output").innerText = n1;
+      n1 += 2;
+  });
+
+  document.getElementById("bottone2").addEventListener("click", function() {
+      document.getElementById("output").innerText = n2;
+      n2 += 3;
+  });
+
+  document.getElementById("bottone3").addEventListener("click", function() {
+      document.getElementById("output").innerText = n3;
+      n3 += 7;
+  });
+</script>
+</body>
+</html>
