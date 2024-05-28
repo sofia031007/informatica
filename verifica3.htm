@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrati con Numeri Primi</title>
+    <style>
+        .square {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 1px solid black;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+
+        let container = document.createElement('div');
+        container.id = 'container';
+        document.body.appendChild(container);
+
+
+        for (let i = 1; i <= 1000; i++) {
+            let square = document.createElement('div');
+            square.className = 'square';
+            square.innerText = i;
+            if (isPrime(i)) {
+                square.style.backgroundColor = 'lightcoral';
+                square.style.cursor = 'pointer';
+                square.onclick = function() {
+                    window.open('prime_page.html?number=' + i, '_blank');
+                }
+            }
+            container.appendChild(square);
+        }
+    </script>
+</body>
+</html>
+
